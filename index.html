@@ -7,42 +7,12 @@
     <body>  
         <h1>TEST</h1>
         <div id="chat_id"></div>
-        <div id="test"></div>
          <script>
             
                 let tg = window.Telegram.WebApp;
                 tg.expand();
-                let chatId = tg.initDataUnsafe?.user?.id || "неизвестный";
-                document.getElementById("chat_id").innerHTML = chatId;
-                document.getElementById("test").innerHTML = JSON.stringify(tg.initDataUnsafe, null, 5);
-                //console.log("Chat ID:", chatId);
-                
-                // Перенаправляем пользователя на свой сервер с chat_id
-                //window.location.href = `https://script.google.com/macros/s/AKfycbwgdo4kAmmqwRGlZCtkm_QJnLYyJ1-dZE_SEhccL-_bwYbyo9MPbnLFToM1XLlzSFsCzg/exec?chat_id=${chatId}`;
-
-                // let tg = window.Telegram.WebApp;
-                //   tg.expand(); // Разворачивает WebApp на весь экран
-
-                //   setTimeout(() => {
-                //       let chatId = tg.initDataUnsafe?.user?.id || "неизвестный";
-                //       document.getElementById("chat_id").innerText = JSON.stringify(tg.initDataUnsafe, null, 2);
-                //   }, 1000);
-
-                // let tg = window.Telegram.WebApp;
-
-                // tg.expand(); 
-                //   document.body.innerHTML = `
-                //       <h3>window.location</h3>
-                //       <pre>${JSON.stringify(window.location, null, 2)}</pre>
-                      
-                //       <h3>tg.initData</h3>
-                //       <pre>${JSON.stringify(tg.initData, null, 2)}</pre>
-                      
-                //       <h3>tg.initDataUnsafe</h3>
-                //       <pre>${JSON.stringify(tg.initDataUnsafe, null, 2)}</pre>
-                //   `;
-
-
+                let chatId = tg.initDataUnsafe?.user?.id || "unknown";
+                document.getElementById("chat_id").innerHTML = 'Your chat_id: ${chatId}';
         </script>
     </body>
 </html>
