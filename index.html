@@ -10,6 +10,7 @@
          <script>
             
                 let tg = window.Telegram.WebApp;
+                tg.expand();
                 let chatId = tg.initDataUnsafe?.user?.id || "неизвестный";
                 document.getElementById("chat_id").innerHTML = chatId;
                 document.getElementById("test").innerHTML = JSON.stringify(tg.initDataUnsafe, null, 5);
