@@ -12,7 +12,7 @@
                 let tg = window.Telegram.WebApp;
                 tg.expand();
                 let chatId = tg.initDataUnsafe?.user?.id || "unknown";
-                document.getElementById("chat_id").innerHTML = 'Your chat_id: ${chatId}';
+                document.getElementById("chat_id").innerHTML = `Your chat_id: ${chatId}`;
         </script>
     </body>
 </html>
